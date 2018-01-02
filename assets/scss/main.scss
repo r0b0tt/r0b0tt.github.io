@@ -1,0 +1,625 @@
+        @import 'buttons.scss';
+        @import 'colors.scss';
+        @import 'mixins.scss';
+        /* Reset */
+
+        * {
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            line-height: 1.5;
+        }
+
+        a {
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        img {
+            width: 100%;
+        }
+
+        .wrap {
+            width: 85%;
+            margin: 0 auto;
+        }
+
+        body {
+            header {
+                width: 100%;
+                height: 100vh;
+                background: url("../img/background.jpeg") center no-repeat;
+                background-size: cover;
+                #side-nav {
+                    background: $black;
+                    width: 0;
+                    height: 100vh;
+                    z-index: 1;
+                    position: fixed;
+                    right: 0;
+                    top: 0;
+                    text-align: center;
+                    font-family: $font_asap_regular;
+                    @include transition();
+                    #close-nav {
+                        display: none;
+                        position: absolute;
+                        right: 10px;
+                        top: 10px;
+                        text-align: left;
+                        color: #ff3333;
+                        font-size: 200%;
+                        transition: inherit;
+                        &:hover {
+                            color: $purple;
+                            cursor: pointer;
+                        }
+                    }
+                    a {
+                        color: #f4f4f4;
+                        @include transition();
+                        img {
+                            width: 60px;
+                            margin: 20px;
+                        }
+                        &:hover {
+                            color: $purple;
+                        }
+                    }
+                    h1 {
+                        color: $blue;
+                        padding: 10px;
+                    }
+                    #side-social {
+                        a {
+                            font-size: 150%;
+                            padding: 0 5px;
+                        }
+                    }
+                    #links {
+                        a {
+                            display: block;
+                            font-size: 150%;
+                            padding: 5px 0;
+                        }
+                    }
+                }
+                #background-overlay {
+                    height: inherit;
+                    background: rgba(155, 89, 182, 0.8);
+                    nav {
+                        font-family: $font_raleway_medium;
+                        color: #f4f4f4;
+                        clear: both;
+                        height: 80px;
+                        padding: 10px;
+                        a {
+                            color: #f4f4f4;
+                            display: inline-block;
+                            padding: 10px;
+                            @include transition();
+                            &:hover {
+                                color: $black;
+                            }
+                        }
+                        .left-nav {
+                            float: left;
+                            padding: 5px 0;
+                        }
+                        #logo {
+                            padding: 0px;
+                            img {
+                                width: 60px;
+                                position: absolute;
+                                left: 50%;
+                                right: 50%;
+                            }
+                        }
+                        .right-nav {
+                            float: right;
+                            font-size: 150%;
+                            a {
+                                padding-left: 5px;
+                                padding-right: 5px;
+                            }
+                        }
+                        #menu-icon {
+                            display: none;
+                            font-size: 200%;
+                            padding: 10px;
+                            float: right;
+                            &:hover {
+                                cursor: pointer;
+                            }
+                        }
+                    }
+                    #jumbotron {
+                        text-align: center;
+                        color: #f4f4f4;
+                        margin: 100px 0 0 0;
+                        h1,
+                        h2,
+                        p {
+                            margin-top: 20px;
+                        }
+                        h1 {
+                            font-size: 300%;
+                            font-family: $font_raleway_medium;
+                        }
+                        h2 {
+                            font-size: 200%;
+                            font-family: $font_raleway_regular;
+                        }
+                        p {
+                            font-family: $font_asap_regular;
+                            font-size: 150%;
+                        }
+                    }
+                    #read-more {
+                        color: rgba(255, 255, 255, 0.8);
+                        text-align: center;
+                        font-family: $font_asap_regular;
+                        margin-top: 100px;
+                        a {
+                            display: inline-block;
+                            color: inherit;
+                            font-size: 120%;
+                            @include transition();
+                            &:hover {
+                                color: rgba(255, 255, 255, 0.4);
+                            }
+                        }
+                    }
+                }
+            }
+            #about {
+                text-align: center;
+                padding: 30px 0;
+                h1 {
+                    font-family: $font_raleway_medium;
+                    font-size: 200%;
+                    color: $purple;
+                    margin-bottom: 20px;
+                }
+                img {
+                    width: 100px;
+                    @include border-radius(50%);
+                    margin-bottom: 20px;
+                }
+                p {
+                    color: $black;
+                    font-family: $font_asap_regular;
+                    width: 75%;
+                    margin: 0 auto;
+                }
+            }
+            #services {
+                text-align: center;
+                background: $purple;
+                padding: 30px 0;
+                h1 {
+                    font-family: $font_raleway_medium;
+                    font-size: 200%;
+                    color: #f4f4f4;
+                    margin-bottom: 20px;
+                }
+                .row {
+                    clear: both;
+                    overflow: hidden;
+                    .service {
+                        float: left;
+                        width: 25%;
+                        background: #f4f4f4;
+                        padding: 20px 15px;
+                        margin: 2.5%;
+                        @include box-shadow();
+                        @include border-radius(10px);
+                        h3 {
+                            font-family: $font_raleway_regular;
+                            color: $purple;
+                            font-size: 130%;
+                        }
+                        i {
+                            font-size: 150%;
+                            color: $blue;
+                            padding: 10px 0;
+                        }
+                        p {
+                            font-family: $font_asap_regular;
+                            color: $black;
+                        }
+                    }
+                    .service:first-child {
+                        margin-left: 7.5%;
+                    }
+                    .service:last-child {
+                        margin-right: 7.5%;
+                    }
+                }
+            }
+            #services:after {
+                content: '';
+                position: relative;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: #000;
+                -webkit-transform-origin: 100% 0;
+                -ms-transform-origin: 100% 0;
+                transform-origin: 100% 0;
+                -webkit-transform: skew(-45deg);
+                -ms-transform: skew(-45deg);
+                transform: skew(-45deg);
+                z-index: 9999;
+            }
+            #skills {
+                text-align: center;
+                padding: 30px;
+                clear: both;
+                h1 {
+                    font-family: $font_raleway_medium;
+                    font-size: 200%;
+                    color: $purple;
+                    margin-bottom: 20px;
+                }
+                .skill {
+                    background: $blue;
+                    color: #f4f4f4;
+                    float: left;
+                    height: 150px;
+                    width: 150px;
+                    margin: 20px;
+                    @include border-radius(50%);
+                    p {
+                        font-family: $font_asap_medium;
+                        font-size: 20px;
+                        padding-top: 60px;
+                    }
+                }
+            }
+            #contact {
+                clear: both;
+                background: $purple;
+                padding: 30px 0;
+                text-align: center;
+                overflow: hidden;
+                h1 {
+                    font-family: $font_raleway_medium;
+                    font-size: 200%;
+                    color: #f4f4f4;
+                    margin-bottom: 20px 0 10px 0;
+                }
+                p {
+                    color: #f4f4f4;
+                    font-family: $font_asap_medium;
+                    margin: 10px 0;
+                }
+                #contacts {
+                    float: left;
+                    width: 40%;
+                    text-align: left;
+                    padding-bottom: 20px;
+                    color: #f4f4f4;
+                    p {
+                        padding: 5px 0;
+                        span {
+                            color: rgba(255, 255, 255, 0.8);
+                        }
+                    }
+                    a {
+                        color: #f4f4f4;
+                        font-family: $font_raleway_regular;
+                        @include transition();
+                        i {
+                            font-size: 150%;
+                        }
+                        &:hover {
+                            color: $black;
+                        }
+                    }
+                }
+                #contact-form {
+                    float: left;
+                    width: 60%;
+                    padding: 30px;
+                    #name,
+                    #email,
+                    #subject,
+                    textarea {
+                        width: 100%;
+                        padding: 10px 20px;
+                        background: #f4f4f4;
+                        border: 2px solid $purple;
+                        color: $purple;
+                        font-family: $font_asap_regular;
+                        @include border-radius(50px);
+                    }
+                    textarea {
+                        @include border-radius(20px);
+                    }
+                }
+                #copyright {
+                    font-family: $font_asap_regular;
+                    clear: both;
+                    color: rgba(255, 255, 255, 0.4);
+                }
+            }
+            /* Media Queries */
+            @media screen and (max-width: 450px) {
+                header {
+                    #background-overlay {
+                        nav {
+                            #logo {
+                                img {
+                                    width: 50px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            @media screen and (max-width: 768px) {
+                header {
+                    #background-overlay {
+                        nav {
+                            #logo {
+                                img {
+                                    left: 50px;
+                                }
+                            }
+                            .right-nav,
+                            .left-nav {
+                                display: none;
+                            }
+                            #menu-icon {
+                                display: inline-block;
+                            }
+                        }
+                        #jumbotron {
+                            margin: 80px 0 0 0;
+                            h1,
+                            h2,
+                            p {
+                                margin-top: 10px;
+                            }
+                            h1 {
+                                font-size: 200%;
+                            }
+                            h2 {
+                                font-size: 150%;
+                            }
+                            p {
+                                font-size: 100%;
+                            }
+                        }
+                        #read-more {
+                            margin-top: 80px;
+                            font-size: 80%;
+                        }
+                    }
+                }
+                #about,
+                #skills,
+                #services,
+                #contact {
+                    h1 {
+                        font-size: 150%;
+                    }
+                    p {
+                        font-size: 100%;
+                    }
+                }
+                #services {
+                    .row {
+                        .service {
+                            float: none;
+                            display: block;
+                            width: 100%;
+                            margin-left: 0;
+                        }
+                        .service:first-child {
+                            margin-left: 0%;
+                        }
+                        .service:last-child {
+                            margin-right: 0%;
+                        }
+                    }
+                }
+                #skills {
+                    .skill {
+                        height: 100px;
+                        width: 100px;
+                        margin: 10px;
+                        p {
+                            font-size: 80%;
+                            padding-top: 40px;
+                        }
+                    }
+                }
+                #contact {
+                    #contacts {
+                        text-align: center;
+                        float: none;
+                        width: 100%;
+                        p {
+                            padding: 5px;
+                            display: inline-block;
+                        }
+                    }
+                    #contact-form {
+                        float: none;
+                        width: 100%;
+                        padding: 10px;
+                        #name,
+                        #email,
+                        #subject,
+                        textarea {
+                            width: 100%;
+                            padding: 10px 20px;
+                            background: #f4f4f4;
+                            border: 2px solid $purple;
+                            color: $purple;
+                            font-family: $font_asap_regular;
+                            @include border-radius(50px);
+                        }
+                        textarea {
+                            @include border-radius(20px);
+                        }
+                    }
+                }
+            }
+            @media screen and (min-width: 1024px) {
+                header {
+                    #background-overlay {
+                        nav {
+                            .left-nav {
+                                a {
+                                    font-size: 100%;
+                                    padding-left: 5px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            @media screen and (min-width: 2000px) {
+                header {
+                    #background-overlay {
+                        nav {
+                            .left-nav {
+                                a {
+                                    font-size: 200%;
+                                }
+                            }
+                            #logo {
+                                img {
+                                    width: 100px;
+                                }
+                            }
+                            .right-nav {
+                                a {
+                                    font-size: 200%;
+                                    margin-left: 20px;
+                                }
+                            }
+                        }
+                        #jumbotron {
+                            margin: 350px 0 0 0;
+                            h1,
+                            h2,
+                            p {
+                                margin-top: 40px;
+                            }
+                            h1 {
+                                font-size: 500%;
+                            }
+                            h2 {
+                                font-size: 300%;
+                            }
+                            p {
+                                font-size: 250%;
+                            }
+                        }
+                        #read-more {
+                            margin-top: 300px;
+                            a {
+                                display: inline-block;
+                                color: inherit;
+                                font-size: 200%;
+                            }
+                        }
+                    }
+                }
+                #about {
+                    padding: 50px 0;
+                    h1 {
+                        font-size: 400%;
+                        margin-bottom: 20px;
+                    }
+                    img {
+                        width: 250px;
+                        margin-bottom: 40px;
+                    }
+                    p {
+                        font-size: 250%;
+                    }
+                }
+                #services {
+                    padding: 50px 0;
+                    h1 {
+                        font-size: 400%;
+                        margin-bottom: 20px;
+                    }
+                    .row {
+                        clear: both;
+                        overflow: hidden;
+                        .service {
+                            padding: 50px 20px;
+                            margin: 2.5%;
+                            h3 {
+                                font-size: 260%;
+                            }
+                            i {
+                                font-size: 400%;
+                                color: $blue;
+                                padding: 40px 0;
+                            }
+                            p {
+                                font-size: 250%;
+                            }
+                        }
+                    }
+                }
+                #skills {
+                    padding: 50px 0;
+                    overflow: hidden;
+                    h1 {
+                        font-size: 400%;
+                    }
+                    .skill {
+                        height: 300px;
+                        width: 300px;
+                        p {
+                            font-size: 250%;
+                            padding-top: 125px;
+                        }
+                    }
+                }
+                #contact {
+                    padding: 50px 0;
+                    h1 {
+                        font-size: 400%;
+                        margin-bottom: 20px;
+                    }
+                    p {
+                        font-size: 250%;
+                        margin: 20px 0;
+                    }
+                    #contacts {
+                        p {
+                            padding: 10px 0;
+                        }
+                    }
+                    #contact-form {
+                        padding: 30px;
+                        #name,
+                        #email,
+                        #subject,
+                        textarea {
+                            padding: 30px 40px;
+                            font-size: 200%;
+                            margin-bottom: 10px;
+                        }
+                        textarea {
+                            @include border-radius(50px);
+                        }
+                    }
+                    #copyright {
+                        font-size: 250%;
+                    }
+                }
+            }
+        }

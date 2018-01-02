@@ -1,0 +1,50 @@
+@import 'fonts.scss';
+@import 'colors.scss';
+@import 'mixins.scss';
+
+/* Buttons */
+
+.btn {
+    font-family: $font_asap_regular;
+    padding: 10px 50px;
+    border: 1px solid $blue;
+    margin: 20px;
+    cursor: pointer;
+    @include border-radius(50px);
+    @include box-shadow();
+    @include transition();
+}
+
+.btn-primary {
+    background: $blue;
+    color: #f4f4f4;
+    &:hover {
+        background: #f4f4f4;
+        color: $blue;
+    }
+}
+
+.btn-secondary {
+    background: transparent;
+    color: $blue;
+    &:hover {
+        background: $blue;
+        color: #f4f4f4;
+    }
+}
+
+
+/* Media Queries. */
+
+@media screen and (min-width: 2000px) {
+    .btn {
+        padding: 30px 150px;
+        border: 1px solid $blue;
+        margin: 50px;
+        font-size: 250%;
+        cursor: pointer;
+        @include border-radius(50px);
+        @include box-shadow();
+        @include transition();
+    }
+}

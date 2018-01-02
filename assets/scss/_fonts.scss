@@ -1,0 +1,26 @@
+/* Fonts */
+
+@font-face {
+    font-family: Asap-Regular;
+    src: url("../fonts/Asap-Regular.ttf");
+}
+
+@font-face {
+    font-family: Asap-Medium;
+    src: url("../fonts/Asap-Medium.ttf");
+}
+
+@font-face {
+    font-family: Raleway-Regular;
+    src: url("../fonts/Raleway-Regular.ttf");
+}
+
+@font-face {
+    font-family: Raleway-Medium;
+    src: url("../fonts/Raleway-Medium.ttf");
+}
+
+$font_asap_regular: Asap-Regular;
+$font_asap_medium: Asap-Medium;
+$font_raleway_regular: Raleway-Regular;
+$font_raleway_medium: Raleway-Medium;
