@@ -1,5 +1,7 @@
 .vscode/
 assets/img/
 assets/compressed
-assets/.sass-cache/
+.sass-cache
+.idea
+
 
