@@ -1,0 +1,29 @@
+.landing{
+  @include background-linear-gradient(to bottom, $primary-color, $secondary-color);
+  height: 100vh;
+  max-height: 100vh;
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: inherit;
+  }
+
+  .navbar {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+
+    .logo{
+      width: 64px;
+      height: 64px;
+      object-fit: contain;
+    }
+  }
+
+  .jumbotron{
+
+  }
+}

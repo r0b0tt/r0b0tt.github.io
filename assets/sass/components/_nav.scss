@@ -1,0 +1,13 @@
+.nav {
+  .nav__link {
+    font-size: $fs-nav;
+    padding: 16px;
+    color: $color-white--light;
+    font-family: $font-roboto-regular;
+    @include transition(all, 0.3s, ease-in-out);
+
+    &:hover{
+      color: rgba($color-white--light, 0.5);
+    }
+  }
+}
