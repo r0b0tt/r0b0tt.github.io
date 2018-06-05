@@ -695,10 +695,11 @@ img {
 .services {
   display: flex;
   flex-flow: row-reverse nowrap;
+  background: #f4f4f4;
 }
-/* line 142, ../sass/pages/_pages.scss */
+/* line 143, ../sass/pages/_pages.scss */
 .services .services__image {
-  width: 40%;
+  width: 50%;
   background: -webkit-linear-gradient(to bottom, #008ced, #9b59b6);
   background: -moz-linear-gradient(to bottom, #008ced, #9b59b6);
   background: -ms-linear-gradient(to bottom, #008ced, #9b59b6);
@@ -709,16 +710,17 @@ img {
   justify-content: center;
   align-items: center;
 }
-/* line 150, ../sass/pages/_pages.scss */
+/* line 151, ../sass/pages/_pages.scss */
 .services .services__content {
   padding: 16px 0;
 }
-/* line 152, ../sass/pages/_pages.scss */
+/* line 153, ../sass/pages/_pages.scss */
 .services .services__content .subheading-1 {
   color: #008ced;
 }
-/* line 156, ../sass/pages/_pages.scss */
+/* line 157, ../sass/pages/_pages.scss */
 .services .services__content .services__service {
+  background: #fff;
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
   border-radius: 10px;
@@ -728,11 +730,94 @@ img {
   align-items: center;
   padding: 8px;
 }
-/* line 164, ../sass/pages/_pages.scss */
+/* line 166, ../sass/pages/_pages.scss */
 .services .services__content .services__service .services__desc {
   margin: 0 8px;
 }
-/* line 168, ../sass/pages/_pages.scss */
+/* line 170, ../sass/pages/_pages.scss */
 .services .services__content .services__service:last-child {
   flex-direction: row-reverse;
+}
+
+/* line 177, ../sass/pages/_pages.scss */
+.contact {
+  background: -webkit-linear-gradient(to right, #008ced, #9b59b6);
+  background: -moz-linear-gradient(to right, #008ced, #9b59b6);
+  background: -ms-linear-gradient(to right, #008ced, #9b59b6);
+  background: -o-linear-gradient(to right, #008ced, #9b59b6);
+  background: linear-gradient(to right, #008ced, #9b59b6);
+  font-family: roboto-regular;
+  padding: 16px 0;
+}
+/* line 181, ../sass/pages/_pages.scss */
+.contact .subheading-1 {
+  text-align: center;
+  color: #f4f4f4;
+}
+/* line 185, ../sass/pages/_pages.scss */
+.contact .contact__content {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+}
+/* line 189, ../sass/pages/_pages.scss */
+.contact .contact__content .contact__image {
+  width: 50%;
+}
+/* line 191, ../sass/pages/_pages.scss */
+.contact .contact__content .contact__image .img {
+  padding: 32px;
+}
+/* line 196, ../sass/pages/_pages.scss */
+.contact .contact__content .contact__contacts * {
+  margin-bottom: 12px;
+}
+/* line 199, ../sass/pages/_pages.scss */
+.contact .contact__content .contact__contacts .contact__tagline {
+  color: #f4f4f4;
+  font-size: 24px;
+}
+/* line 203, ../sass/pages/_pages.scss */
+.contact .contact__content .contact__contacts .contact__contact {
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  color: rgba(244, 244, 244, 0.6);
+  font-size: 16px;
+  display: block;
+}
+/* line 208, ../sass/pages/_pages.scss */
+.contact .contact__content .contact__contacts .contact__contact .fa {
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  font-size: 150%;
+  color: #f4f4f4;
+}
+/* line 213, ../sass/pages/_pages.scss */
+.contact .contact__content .contact__contacts .contact__contact:hover {
+  color: #f4f4f4;
+}
+/* line 215, ../sass/pages/_pages.scss */
+.contact .contact__content .contact__contacts .contact__contact:hover .fa {
+  color: rgba(244, 244, 244, 0.6);
+}
+/* line 221, ../sass/pages/_pages.scss */
+.contact .contact__content .contact__contacts .contacts__social .fab {
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  font-size: 200%;
+  margin-right: 8px;
+  color: rgba(244, 244, 244, 0.6);
+}
+/* line 226, ../sass/pages/_pages.scss */
+.contact .contact__content .contact__contacts .contacts__social .fab:hover {
+  color: #f4f4f4;
 }
