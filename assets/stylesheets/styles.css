@@ -77,6 +77,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 }
 /* Transition Mixin */
 /* Background Linear Gradient */
+/* Border Radius */
 /*! normalize.css v8.0.0 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -443,9 +444,20 @@ template {
 }
 
 /* line 1, ../sass/generic/_reset.scss */
+* {
+  box-sizing: border-box;
+}
+
+/* line 4, ../sass/generic/_reset.scss */
 a {
   text-decoration: none;
   display: inline-block;
+}
+
+/* line 8, ../sass/generic/_reset.scss */
+img {
+  width: 100%;
+  object-fit: contain;
 }
 
 /* line 1, ../sass/objects/_layout.scss */
@@ -469,6 +481,52 @@ a {
 /* line 9, ../sass/components/_nav.scss */
 .nav .nav__link:hover {
   color: rgba(244, 244, 244, 0.5);
+}
+
+/* line 1, ../sass/components/_buttons.scss */
+.btn {
+  padding: 10px 16px;
+  font-size: 14px;
+  font-family: roboto-regular;
+  box-shadow: 3px 3px 5px rgba(51, 51, 51, 0.8);
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+}
+
+/* line 9, ../sass/components/_buttons.scss */
+.btn--primary {
+  background: #f4f4f4;
+  color: #008ced;
+}
+
+/* line 14, ../sass/components/_buttons.scss */
+.btn--secondary {
+  background: -webkit-linear-gradient(to right, #008ced, #9b59b6);
+  background: -moz-linear-gradient(to right, #008ced, #9b59b6);
+  background: -ms-linear-gradient(to right, #008ced, #9b59b6);
+  background: -o-linear-gradient(to right, #008ced, #9b59b6);
+  background: linear-gradient(to right, #008ced, #9b59b6);
+  color: #f4f4f4;
+}
+
+/* line 1, ../sass/components/_typography.scss */
+.content {
+  font-family: roboto-regular;
+  font-size: 16px;
+  color: rgba(51, 51, 51, 0.8);
+}
+
+/* line 7, ../sass/components/_typography.scss */
+.subheading-1 {
+  font-size: 32px;
+  font-family: roboto-medium;
+}
+
+/* line 11, ../sass/components/_typography.scss */
+.subheading-2 {
+  font-size: 24px;
+  font-family: roboto-medium;
 }
 
 /* line 1, ../sass/pages/_pages.scss */
@@ -499,5 +557,182 @@ a {
 .landing .navbar .logo {
   width: 64px;
   height: 64px;
+}
+/* line 25, ../sass/pages/_pages.scss */
+.landing .jumbotron {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  color: #f4f4f4;
+  font-family: roboto-regular;
+}
+/* line 32, ../sass/pages/_pages.scss */
+.landing .jumbotron .jumbotron__greetings, .landing .jumbotron .jumbotron__role, .landing .jumbotron .jumbotron__caption {
+  margin-bottom: 16px;
+}
+/* line 35, ../sass/pages/_pages.scss */
+.landing .jumbotron .jumbotron__greetings {
+  font-size: 56px;
+  font-family: roboto-medium;
+}
+/* line 39, ../sass/pages/_pages.scss */
+.landing .jumbotron .jumbotron__role {
+  font-size: 32px;
+  font-family: roboto-medium;
+  color: rgba(244, 244, 244, 0.8);
+}
+/* line 44, ../sass/pages/_pages.scss */
+.landing .jumbotron .jumbotron__caption {
+  font-size: 24px;
+  color: rgba(244, 244, 244, 0.6);
+}
+/* line 48, ../sass/pages/_pages.scss */
+.landing .jumbotron .jumbotron__image {
+  width: 350px;
+}
+/* line 53, ../sass/pages/_pages.scss */
+.landing .bottom-nav {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+/* line 58, ../sass/pages/_pages.scss */
+.landing .bottom-nav .fa-chevron-down {
+  color: #f7f7f7;
+}
+
+/* line 64, ../sass/pages/_pages.scss */
+.about {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background: #f7f7f7;
+}
+/* line 69, ../sass/pages/_pages.scss */
+.about .about__image {
+  width: 40%;
+  position: relative;
+}
+/* line 72, ../sass/pages/_pages.scss */
+.about .about__image .img-overlay {
+  z-index: 999;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  display: block;
+  transition: .5s ease;
+  background: -webkit-linear-gradient(to bottom, #008ced, #9b59b6);
+  background: -moz-linear-gradient(to bottom, #008ced, #9b59b6);
+  background: -ms-linear-gradient(to bottom, #008ced, #9b59b6);
+  background: -o-linear-gradient(to bottom, #008ced, #9b59b6);
+  background: linear-gradient(to bottom, #008ced, #9b59b6);
+  opacity: 0.8;
+}
+/* line 87, ../sass/pages/_pages.scss */
+.about .about__content {
+  flex: 1;
+  text-align: center;
+  padding: 16px;
+}
+/* line 92, ../sass/pages/_pages.scss */
+.about .about__content .about__title {
+  color: #008ced;
+}
+/* line 96, ../sass/pages/_pages.scss */
+.about .about__content .btn {
+  margin: 8px;
+}
+
+/* line 102, ../sass/pages/_pages.scss */
+.projects {
+  background: #f7f7f7;
+  padding: 24px 0;
+}
+/* line 105, ../sass/pages/_pages.scss */
+.projects .projects_head {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  color: #008ced;
+  margin-bottom: 8px;
+}
+/* line 113, ../sass/pages/_pages.scss */
+.projects .projects__projects .projects__project {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-evenly;
+  align-items: center;
+}
+/* line 118, ../sass/pages/_pages.scss */
+.projects .projects__projects .projects__project .project__image {
+  width: 50%;
+}
+/* line 120, ../sass/pages/_pages.scss */
+.projects .projects__projects .projects__project .project__image .img {
+  height: 300px;
   object-fit: contain;
+}
+/* line 125, ../sass/pages/_pages.scss */
+.projects .projects__projects .projects__project .project__content {
+  padding: 16px;
+}
+/* line 127, ../sass/pages/_pages.scss */
+.projects .projects__projects .projects__project .project__content .subheading-2 {
+  color: #008ced;
+}
+/* line 130, ../sass/pages/_pages.scss */
+.projects .projects__projects .projects__project .project__content * {
+  margin-bottom: 8px;
+}
+
+/* line 138, ../sass/pages/_pages.scss */
+.services {
+  display: flex;
+  flex-flow: row-reverse nowrap;
+}
+/* line 142, ../sass/pages/_pages.scss */
+.services .services__image {
+  width: 40%;
+  background: -webkit-linear-gradient(to bottom, #008ced, #9b59b6);
+  background: -moz-linear-gradient(to bottom, #008ced, #9b59b6);
+  background: -ms-linear-gradient(to bottom, #008ced, #9b59b6);
+  background: -o-linear-gradient(to bottom, #008ced, #9b59b6);
+  background: linear-gradient(to bottom, #008ced, #9b59b6);
+  display: flex;
+  flex-flow: row-reverse nowrap;
+  justify-content: center;
+  align-items: center;
+}
+/* line 150, ../sass/pages/_pages.scss */
+.services .services__content {
+  padding: 16px 0;
+}
+/* line 152, ../sass/pages/_pages.scss */
+.services .services__content .subheading-1 {
+  color: #008ced;
+}
+/* line 156, ../sass/pages/_pages.scss */
+.services .services__content .services__service {
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  margin: 16px 0;
+  box-shadow: 3px 3px 5px rgba(51, 51, 51, 0.1), -3px -3px 5px rgba(51, 51, 51, 0.1);
+  display: flex;
+  align-items: center;
+  padding: 8px;
+}
+/* line 164, ../sass/pages/_pages.scss */
+.services .services__content .services__service .services__desc {
+  margin: 0 8px;
+}
+/* line 168, ../sass/pages/_pages.scss */
+.services .services__content .services__service:last-child {
+  flex-direction: row-reverse;
 }

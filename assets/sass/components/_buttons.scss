@@ -1,0 +1,17 @@
+.btn{
+  padding: 10px 16px;
+  font-size: 14px;
+  font-family: $font-roboto-regular;
+  box-shadow: 3px 3px 5px rgba(#333, 0.8);
+  @include border-radius(8px)
+}
+
+.btn--primary{
+  background: $color-white--light;
+  color: $primary-color;
+}
+
+.btn--secondary{
+  @include background-linear-gradient(to right, $primary-color, $secondary-color);
+  color: $color-white--light;
+}
