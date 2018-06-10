@@ -15,10 +15,51 @@
 </head>
 <body>
 <header>
+    <section class="mobile-nav" id="mobile-nav">
+        <span>
+            <a onclick="closeNav()" class="fa fa-times close-nav"></a>
+            <div class="mobile-nav__header">
+                <img src="./assets/images/me.png" alt="Antonio" class="img">
+                <span class="--details">
+                <p class="mobile-nav__name">ANTONIO MAINA</p>
+                <p class="mobile-nav__role">Fullstack Web and Mobile Developer</p>
+            </span>
+            </div>
+
+            <hr class="hr">
+
+            <nav class="nav">
+                <a href="#" class="nav__link">ABOUT ME</a>
+                <a href="#" class="nav__link">PROJECTS</a>
+                <a href="#" class="nav__link">WHAT I DO</a>
+                <a href="#" class="nav__link">CONTACT ME</a>
+            </nav>
+
+            <hr class="hr">
+
+            <div class="mobile-nav__contacts">
+                <a class="mobile-nav__contact" href="tel:+254708342042">
+                    <i class="fa fa-phone-square"></i> +254 708 342042
+                </a>
+                <a href="mailto:antoniomainakn@gmail.com" class="mobile-nav__contact">
+                    <i class="fa fa-envelope-square"></i> antoniomainakn@gmail.com
+                </a>
+                <span class="--social">
+                <div class="contacts__social">
+                    <a href="#"><i class="fab fa-telegram"></i></a>
+                    <a href="#"><i class="fab fa-github-square"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter-square"></i></a>
+                </div>
+            </span>
+            </div>
+        </span>
+    </section>
+
     <div class="landing">
         <div class="container">
             <nav class="navbar">
-                <a href="#">
+                <a href="index.html">
                     <img src="./assets/images/logo.png" alt="logo" class="logo">
                 </a>
                 <div class="nav">
@@ -26,6 +67,7 @@
                     <a href="#" class="nav__link">PROJECTS</a>
                     <a href="#" class="nav__link">WHAT I DO</a>
                     <a href="#" class="nav__link">CONTACT ME</a>
+                    <a onclick="openNav()" class="nav__link open-nav"><i class="fa fa-bars"></i></a>
                 </div>
             </nav>
             <div class="jumbotron">
@@ -130,23 +172,27 @@
         <div class="container">
             <p class="subheading-1">WHAT I DO</p>
             <div class="services__service">
-                <img src="./assets/images/what-i-do__web.svg" alt="Web Development">
+                <img src="./assets/images/what-i-do__web.svg" alt="Web Development" class="img">
                 <div class="services__desc">
                     <p class="subheading-2">WEB DEVELOPMENT</p>
                     <p class="content">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem beatae, dicta explicabo laboriosam
-                        quia ullam. Aliquid animi, aut commodi deserunt eaque enim illum inventore nemo odio reprehenderit
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem beatae, dicta explicabo
+                        laboriosam
+                        quia ullam. Aliquid animi, aut commodi deserunt eaque enim illum inventore nemo odio
+                        reprehenderit
                         vitae voluptas voluptatem?
                     </p>
                 </div>
             </div>
             <div class="services__service">
-                <img src="./assets/images/what-i-do__mobile.svg" alt="Web Development">
+                <img src="./assets/images/what-i-do__mobile.svg" alt="Web Development" class="img">
                 <div class="services__desc">
                     <p class="subheading-2">MOBILE APP DEVELOPMENT</p>
                     <p class="content">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem beatae, dicta explicabo laboriosam
-                        quia ullam. Aliquid animi, aut commodi deserunt eaque enim illum inventore nemo odio reprehenderit
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem beatae, dicta explicabo
+                        laboriosam
+                        quia ullam. Aliquid animi, aut commodi deserunt eaque enim illum inventore nemo odio
+                        reprehenderit
                         vitae voluptas voluptatem?
                     </p>
                 </div>
@@ -179,5 +225,8 @@
         </div>
     </div>
 </section>
+
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/main.js"></script>
 </body>
 </html>
