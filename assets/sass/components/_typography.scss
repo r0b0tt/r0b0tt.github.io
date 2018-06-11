@@ -6,6 +6,10 @@
 
 .subheading-1{
   font-size: $fs-h2;
+
+  @include breakpoint($tablet) {
+    font-size: 20px;
+  }
   font-family: $font-roboto-medium;
 }
 .subheading-2 {
