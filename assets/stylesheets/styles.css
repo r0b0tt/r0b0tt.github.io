@@ -617,16 +617,26 @@ body, header {
   -webkit-border-radius: 8px;
   -moz-border-radius: 8px;
   border-radius: 8px;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -ms-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+/* line 9, ../sass/components/_buttons.scss */
+.btn:hover {
+  box-shadow: 1px 1px 5px rgba(51, 51, 51, 0.8);
 }
 
-/* line 9, ../sass/components/_buttons.scss */
+/* line 14, ../sass/components/_buttons.scss */
 .btn--primary {
   background: #f4f4f4;
   color: #008ced;
 }
 
-/* line 14, ../sass/components/_buttons.scss */
+/* line 19, ../sass/components/_buttons.scss */
 .btn--secondary {
+  background: #008ced;
   background: -webkit-linear-gradient(to right, #008ced, #9b59b6);
   background: -moz-linear-gradient(to right, #008ced, #9b59b6);
   background: -ms-linear-gradient(to right, #008ced, #9b59b6);
