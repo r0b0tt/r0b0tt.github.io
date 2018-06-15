@@ -637,11 +637,6 @@ body, header {
 /* line 19, ../sass/components/_buttons.scss */
 .btn--secondary {
   background: #008ced;
-  background: -webkit-linear-gradient(to right, #008ced, #9b59b6);
-  background: -moz-linear-gradient(to right, #008ced, #9b59b6);
-  background: -ms-linear-gradient(to right, #008ced, #9b59b6);
-  background: -o-linear-gradient(to right, #008ced, #9b59b6);
-  background: linear-gradient(to right, #008ced, #9b59b6);
   color: #f4f4f4;
 }
 
@@ -979,36 +974,43 @@ body, header {
   text-align: center;
   color: #f4f4f4;
 }
-/* line 252, ../sass/pages/_pages.scss */
+@media (max-width: 480px) {
+  /* line 248, ../sass/pages/_pages.scss */
+  .contact .subheading-1 {
+    margin-bottom: 8px;
+  }
+}
+/* line 255, ../sass/pages/_pages.scss */
 .contact .contact__content {
   display: flex;
   flex-flow: row nowrap;
+  justify-content: space-between;
   align-items: center;
 }
-/* line 256, ../sass/pages/_pages.scss */
+/* line 260, ../sass/pages/_pages.scss */
 .contact .contact__content .contact__image {
   width: 50%;
 }
-/* line 258, ../sass/pages/_pages.scss */
+/* line 262, ../sass/pages/_pages.scss */
 .contact .contact__content .contact__image .img {
   padding: 32px;
 }
 @media (max-width: 480px) {
-  /* line 256, ../sass/pages/_pages.scss */
+  /* line 260, ../sass/pages/_pages.scss */
   .contact .contact__content .contact__image {
     display: none;
   }
 }
-/* line 266, ../sass/pages/_pages.scss */
+/* line 270, ../sass/pages/_pages.scss */
 .contact .contact__content .contact__contacts * {
   margin-bottom: 12px;
 }
-/* line 269, ../sass/pages/_pages.scss */
+/* line 273, ../sass/pages/_pages.scss */
 .contact .contact__content .contact__contacts .contact__tagline {
   color: #f4f4f4;
   font-size: 16px;
 }
-/* line 273, ../sass/pages/_pages.scss */
+/* line 277, ../sass/pages/_pages.scss */
 .contact .contact__content .contact__contacts .contact__contact {
   -webkit-transition: all 0.3s ease-in-out;
   -moz-transition: all 0.3s ease-in-out;
@@ -1019,7 +1021,7 @@ body, header {
   font-size: 16px;
   display: block;
 }
-/* line 278, ../sass/pages/_pages.scss */
+/* line 282, ../sass/pages/_pages.scss */
 .contact .contact__content .contact__contacts .contact__contact .fa {
   -webkit-transition: all 0.3s ease-in-out;
   -moz-transition: all 0.3s ease-in-out;
@@ -1029,15 +1031,15 @@ body, header {
   font-size: 150%;
   color: #f4f4f4;
 }
-/* line 283, ../sass/pages/_pages.scss */
+/* line 287, ../sass/pages/_pages.scss */
 .contact .contact__content .contact__contacts .contact__contact:hover {
   color: #f4f4f4;
 }
-/* line 285, ../sass/pages/_pages.scss */
+/* line 289, ../sass/pages/_pages.scss */
 .contact .contact__content .contact__contacts .contact__contact:hover .fa {
   color: rgba(244, 244, 244, 0.6);
 }
-/* line 291, ../sass/pages/_pages.scss */
+/* line 295, ../sass/pages/_pages.scss */
 .contact .contact__content .contact__contacts .contacts__social .fab {
   -webkit-transition: all 0.3s ease-in-out;
   -moz-transition: all 0.3s ease-in-out;
@@ -1048,7 +1050,7 @@ body, header {
   margin-right: 8px;
   color: rgba(244, 244, 244, 0.6);
 }
-/* line 296, ../sass/pages/_pages.scss */
+/* line 300, ../sass/pages/_pages.scss */
 .contact .contact__content .contact__contacts .contacts__social .fab:hover {
   color: #f4f4f4;
 }

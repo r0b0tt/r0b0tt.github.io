@@ -248,10 +248,14 @@
   .subheading-1{
     text-align: center;
     color: $color-white--light;
+    @include breakpoint($mobile){
+      margin-bottom: 8px;
+    }
   }
   .contact__content{
     display: flex;
     flex-flow: row nowrap;
+    justify-content: space-between;
     align-items: center;
     .contact__image{
       width: 50%;

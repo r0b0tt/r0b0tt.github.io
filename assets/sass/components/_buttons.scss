@@ -18,6 +18,5 @@
 
 .btn--secondary{
   background: $primary-color;
-  @include background-linear-gradient(to right, $primary-color, $secondary-color);
   color: $color-white--light;
 }
