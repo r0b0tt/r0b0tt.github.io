@@ -69,11 +69,11 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 
 @font-face {
   font-family: roboto-regular;
-  src: url('../fonts/Roboto-Regular.ttf?1528339792') format("truetype");
+  src: url('../fonts/Roboto-Regular.ttf?1529057469') format("truetype");
 }
 @font-face {
   font-family: roboto-medium;
-  src: url('../fonts/Roboto-Medium.ttf?1528339792') format("truetype");
+  src: url('../fonts/Roboto-Medium.ttf?1529057469') format("truetype");
 }
 /* Transition Mixin */
 /* Background Linear Gradient */
