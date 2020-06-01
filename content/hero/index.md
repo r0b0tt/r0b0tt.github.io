@@ -1,8 +1,10 @@
 ---
 title: 'Hi, my name is'
-name: 'Brittany Chiang'
-subtitle: 'I build things for the web.'
+name: 'Antonio Maina'
+subtitle: 'I build digital products.'
 buttonText: 'Get In Touch'
 ---
 
-I'm a software engineer based in Boston, MA specializing in building (and occasionally designing) exceptional websites, applications, and everything in between.
+I'm a software engineer based in Nairobi, Kenya. I build and help in building digital products that make a difference.
+
+I design, code and manage scalable websites, web applications, mobile applications and services.

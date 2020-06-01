@@ -1,38 +1,33 @@
 module.exports = {
-  siteTitle: 'Brittany Chiang | Software Engineer',
+  siteTitle: 'Antonio Maina | Software Engineer',
   siteDescription:
-    'Brittany Chiang is a software engineer based in Boston, MA who specializes in building (and occasionally designing) exceptional websites, applications, and everything in between.',
+        'Antonio Maina is a software engineer based in Nairobi, Kenya  who specializes in building and helping build digital products that make a difference',
   siteKeywords:
-    'Brittany Chiang, Brittany, Chiang, bchiang7, software engineer, front-end engineer, web developer, javascript, northeastern',
-  siteUrl: 'https://brittanychiang.com',
+        'Antonio Maina, Antonio, Maina, r0b0tt, __r0b0t__, software engineer, front-end engineer, full stack developer, web developer, nairobi, kenya',
+  siteUrl: 'https://antoniomaina.com',
   siteLanguage: 'en_US',
-  googleAnalyticsID: 'UA-45666519-2',
-  googleVerification: 'DCl7VAf9tcz6eD9gb67NfkNnJ1PKRNcg8qQiwpbx9Lk',
-  name: 'Brittany Chiang',
-  location: 'Boston, MA',
-  email: 'brittany.chiang@gmail.com',
-  github: 'https://github.com/bchiang7',
-  twitterHandle: '@bchiang7',
+  googleAnalyticsID: 'UA-135464428-1',
+  name: 'Antonio Maina',
+  location: 'Nairobi, Kenya',
+  email: 'antoniomainakn@gmail.com',
+  github: 'https://github.com/r0b0tt',
+  twitterHandle: '@__r0b0t__',
   socialMedia: [
     {
       name: 'GitHub',
-      url: 'https://github.com/bchiang7',
+      url: 'https://github.com/r0b0tt',
     },
     {
-      name: 'Linkedin',
-      url: 'https://www.linkedin.com/in/bchiang7',
-    },
-    {
-      name: 'Codepen',
-      url: 'https://codepen.io/bchiang7',
+      name: 'LinkedIn',
+      url: 'https://www.linkedin.com/in/antoniomaina',
     },
     {
       name: 'Instagram',
-      url: 'https://www.instagram.com/bchiang7',
+      url: 'https://www.instagram.com/r0b0tt',
     },
     {
       name: 'Twitter',
-      url: 'https://twitter.com/bchiang7',
+      url: 'https://twitter.com/__r0b0t__',
     },
   ],
 
