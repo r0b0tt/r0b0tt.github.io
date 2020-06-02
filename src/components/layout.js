@@ -13,38 +13,38 @@ if (typeof window !== 'undefined') {
 }
 
 const SkipToContent = styled.a`
-  position: absolute;
-  top: auto;
-  left: -999px;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-  z-index: -99;
-  &:focus,
-  &:active {
-    outline: 0;
-    color: ${colors.green};
-    background-color: ${colors.lightNavy};
-    border-radius: ${theme.borderRadius};
-    padding: 18px 23px;
-    font-size: ${fontSizes.sm};
-    font-family: ${fonts.SFMono};
-    line-height: 1;
-    text-decoration: none;
-    cursor: pointer;
-    transition: ${theme.transition};
-    top: 0;
-    left: 0;
-    width: auto;
-    height: auto;
-    overflow: auto;
-    z-index: 99;
-  }
+    position: absolute;
+    top: auto;
+    left: -999px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    z-index: -99;
+    &:focus,
+    &:active {
+        outline: 0;
+        color: ${colors.green};
+        background-color: ${colors.lightNavy};
+        border-radius: ${theme.borderRadius};
+        padding: 18px 23px;
+        font-size: ${fontSizes.sm};
+        font-family: ${fonts.SFMono};
+        line-height: 1;
+        text-decoration: none;
+        cursor: pointer;
+        transition: ${theme.transition};
+        top: 0;
+        left: 0;
+        width: auto;
+        height: auto;
+        overflow: auto;
+        z-index: 99;
+    }
 `;
 const StyledContent = styled.div`
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 `;
 
 const Layout = ({ children, location }) => {
@@ -70,16 +70,16 @@ const Layout = ({ children, location }) => {
   return (
     <StaticQuery
       query={graphql`
-        query LayoutQuery {
-          site {
-            siteMetadata {
-              title
-              siteUrl
-              description
-            }
-          }
-        }
-      `}
+                query LayoutQuery {
+                    site {
+                        siteMetadata {
+                            title
+                            siteUrl
+                            description
+                        }
+                    }
+                }
+            `}
       render={({ site }) => (
         <div id="root">
           <Head metadata={site.siteMetadata} />
