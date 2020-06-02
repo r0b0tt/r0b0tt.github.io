@@ -52,6 +52,7 @@ const Head = ({ metadata }) => (
     <meta name="msapplication-TileColor" content={config.colors.navy} />
     <meta name="msapplication-TileImage" content={msIcon144x144} />
     <meta name="theme-color" content={config.colors.navy} />
+    {/* <script src="https://raw.githubusercontent.com/VincentGarreau/particles.js/master/particles.min.js"></script> */}
   </Helmet>
 );
 
