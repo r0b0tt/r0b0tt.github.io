@@ -7,7 +7,4 @@ range: 'May 2020 - Present'
 url: 'https://www.weza.io/'
 ---
 
--   Design and Develop user centric tools for clients
--   Maintain systems for the core product
--   Develop timelines and milestones for projects
-    true
+-   Design and build digital platforms for clients and internal use

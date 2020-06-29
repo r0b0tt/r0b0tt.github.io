@@ -220,9 +220,11 @@ const Projects = ({ data }) => {
         </TransitionGroup>
       </StyledGrid>
 
-      <StyledMoreButton onClick={() => setShowMore(!showMore)}>
-                Show {showMore ? 'Less' : 'More'}
-      </StyledMoreButton>
+      {projects.length > 6 && (
+        <StyledMoreButton onClick={() => setShowMore(!showMore)}>
+                    Show {showMore ? 'Less' : 'More'}
+        </StyledMoreButton>
+      )}
     </StyledContainer>
   );
 };
