@@ -50,17 +50,17 @@ const Footer = () => (
     <StyledSocial>
       <StyledSocialList>
         {socialMedia &&
-                        socialMedia.map(({ name, url }, i) => (
-                          <li key={i}>
-                            <StyledSocialLink
-                              href={url}
-                              target="_blank"
-                              rel="nofollow noopener noreferrer"
-                              aria-label={name}>
-                              <FormattedIcon name={name} />
-                            </StyledSocialLink>
-                          </li>
-                        ))}
+                    socialMedia.map(({ name, url }, i) => (
+                      <li key={i}>
+                        <StyledSocialLink
+                          href={url}
+                          target="_blank"
+                          rel="nofollow noopener noreferrer"
+                          aria-label={name}>
+                          <FormattedIcon name={name} />
+                        </StyledSocialLink>
+                      </li>
+                    ))}
       </StyledSocialList>
     </StyledSocial>
     <StyledMetadata tabindex="-1">
