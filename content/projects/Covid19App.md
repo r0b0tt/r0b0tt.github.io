@@ -1,8 +1,9 @@
 ---
 date: '01-05-2020'
 title: 'Covid-19 App'
-cover: './covid19-app.png'
 github: 'https://github.com/r0b0tt/covid19-app-flutter'
+android: ''
+ios: ''
 external: ''
 tech:
     - Flutter

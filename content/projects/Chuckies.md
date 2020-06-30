@@ -1,9 +1,10 @@
 ---
 date: '2019'
 title: 'Chuckies'
-cover: './chuckies.png'
 github: 'https://github.com/r0b0tt/chuckies'
 external: 'https://chuckies.netlify.app/'
+android: ''
+ios: ''
 tech:
     - React.js
     - Redux

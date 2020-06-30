@@ -2,6 +2,8 @@
 date: '01-05-2020'
 title: 'Covid-19 Data Scraper'
 github: 'https://github.com/r0b0tt/covid19-scraper'
+android: ''
+ios: ''
 external: ''
 tech:
     - Python
