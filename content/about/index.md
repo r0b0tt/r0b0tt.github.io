@@ -2,23 +2,25 @@
 title: 'About Me'
 avatar: './me.jpg'
 skills:
-    - JavaScript (ES6+)
+    - JavaScript (ES6+), Typescript
     - HTML & (S)CSS
     - React
-    - Gatsby
+    - NextJS
     - Python
     - Django
     - Flask
-    - Flutter
     - Firebase
-    - Cloud Functions
+    - AWS
+    - Google Cloud Platform
+    - Digital Ocean
+    - ExpressJS
     - Metabase
 ---
 
 Hello! I'm Antonio, a software engineer based in Nairobi, Kenya.
 
-I'm a Computer Science major from [Jomo Kenyatta University of Agriculture and Technology](http://www.jkuat.ac.ke/).  
-I enjoy building digital products that provide amazing experiences for the end user and in the process provide much needed solutions to the community. I design (sometimes), code and manage scalable applications and services with my primary concern being the end user. I have a passion for using cloud technologies, distributed systems and natural language processing.
+I'm a Computer Science graduate from [Jomo Kenyatta University of Agriculture and Technology](http://www.jkuat.ac.ke/).  
+I enjoy building digital products that provide amazing experiences for the end user and in the process provide much needed solutions to the community. I design (sometimes), code and manage scalable applications and services with my primary concern being the end user. I have a passion for using cloud technologies, distributed systems and DevOps.
 
 I also enjoy giving tech talks whenever possible. 😄
 

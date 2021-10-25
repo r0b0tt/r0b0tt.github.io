@@ -54,7 +54,7 @@ module.exports = {
     },
     {
       name: 'Blog',
-      url: 'https://r0b0t.hashnode.dev',
+      url: 'https://antonio.hashnode.dev',
       external: true,
     },
   ],
