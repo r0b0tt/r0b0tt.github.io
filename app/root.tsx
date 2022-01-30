@@ -17,6 +17,19 @@ export const meta: MetaFunction = () => {
 export const links: LinksFunction = () => {
   return [
     {
+      rel: "preconnect",
+      href: "https://fonts.googleapis.com",
+    },
+    {
+      rel: "preconnect",
+      href: "https://fonts.gstatic.com",
+      crossOrigin: "anonymous",
+    },
+    {
+      rel: "stylesheet",
+      href: "https://fonts.googleapis.com/css2?family=Fira+Code&display=swap",
+    },
+    {
       rel: "stylesheet",
       href: styles,
     },
@@ -32,7 +45,7 @@ export default function App() {
         <Meta />
         <Links />
       </head>
-      <body>
+      <body className="bg-background">
         <Outlet />
         <ScrollRestoration />
         <Scripts />
