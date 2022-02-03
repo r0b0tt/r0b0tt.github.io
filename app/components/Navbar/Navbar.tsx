@@ -1,5 +1,6 @@
 import { Link } from "remix";
 
+/** Top Navigation Bar */
 const Navbar = () => {
   return (
     <nav className="navbar">
@@ -11,7 +12,7 @@ const Navbar = () => {
 
       <ol className="navbar__links">
         <li className="navbar__links__link">
-          <Link to={"#about"}>About</Link>{" "}
+          <Link to={"#about"}>About</Link>
         </li>
         <li className="navbar__links__link">
           <Link to={"#work"}>Work</Link>

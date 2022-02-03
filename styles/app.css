@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 .navbar {
-  @apply flex gap-4 justify-between items-center font-mono px-6 sm:px-24 py-3;
+  @apply flex gap-4 justify-between items-center font-mono px-6 sm:px-24 py-3 absolute w-full;
 }
 .navbar__logo {
   @apply w-10 h-10 object-contain;
@@ -19,4 +19,20 @@
 
 .navbar__menu-btn {
   @apply sm:hidden;
+}
+
+.scaffold {
+  @apply px-24 py-12;
+}
+
+.hero {
+  @apply flex flex-col justify-center gap-12 h-screen w-3/4 mx-auto;
+}
+
+.hero > h2 {
+  @apply text-white text-opacity-60;
+}
+
+.btn {
+  @apply px-8 py-4 border-2 border-blue-400 rounded-sm text-blue-400 hover:bg-blue-500 hover:bg-opacity-10 transition-colors duration-300 text-base;
 }

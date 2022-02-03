@@ -27,7 +27,7 @@ export const links: LinksFunction = () => {
     },
     {
       rel: "stylesheet",
-      href: "https://fonts.googleapis.com/css2?family=Fira+Code&display=swap",
+      href: "https://fonts.googleapis.com/css2?family=Fira+Code&family=Fira+Sans&display=swap",
     },
     {
       rel: "stylesheet",
@@ -45,7 +45,7 @@ export default function App() {
         <Meta />
         <Links />
       </head>
-      <body className="bg-background">
+      <body className="bg-background text-gray-100">
         <Outlet />
         <ScrollRestoration />
         <Scripts />

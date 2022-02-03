@@ -5,6 +5,7 @@ module.exports = {
     extend: {
       fontFamily: {
         mono: ["Fira Code", ...defaultTheme.fontFamily.mono],
+        sans: ["Fira Sans", ...defaultTheme.fontFamily.sans],
       },
       colors: {
         background: "#0a192f",
