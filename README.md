@@ -1,51 +1,86 @@
-<div align="center">
-  <img alt="Logo" src="https://raw.githubusercontent.com/r0b0tt/r0b0tt.github.io/develop/src/images/logo.png" width="100" />
-</div>
-<h1 align="center">
-  antoniomaina.com
-</h1>
-<p align="center">
-  The Second iteration of <a href="https://antoniomaina.com" target="_blank">antoniomaina.com</a> built with <a href="https://www.gatsbyjs.org/" target="_blank">Gatsby</a> and hosted with <a href="https://www.vercel.com/" target="_blank">Vercel</a>
-</p>
+# Antonio Maina — CV
 
-![demo](https://raw.githubusercontent.com/r0b0tt/r0b0tt.github.io/master/src/images/demo.png)
+[![Next.js](https://img.shields.io/badge/Next.js-16-black?logo=next.js)](https://nextjs.org/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue?logo=typescript)](https://www.typescriptlang.org/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind%20CSS-3.4-38B2AC?logo=tailwind-css)](https://tailwindcss.com/)
 
-## 🛠 Installation & Set Up
+Personal resume site for [Antonio Maina](https://antoniomaina.com) — a minimalist, print-friendly CV built with Next.js.
 
-1. Install the Gatsby CLI
+Live at [antoniomaina.com](https://antoniomaina.com).
 
-    ```sh
-    npm install -g gatsby-cli
-    ```
+## Getting started
 
-2. Install and use the correct version of Node using [NVM](https://github.com/nvm-sh/nvm)
+```bash
+git clone https://github.com/r0b0tt/r0b0tt.github.io.git
+cd r0b0tt.github.io
+pnpm install
+pnpm dev
+# open http://localhost:3000
+```
 
-    ```sh
-    nvm install
-    ```
+## Scripts
 
-3. Install dependencies
+```bash
+pnpm dev          # start development server
+pnpm build        # build for production
+pnpm start        # start production server
+pnpm lint         # run biome linting checks
+pnpm lint:fix     # run biome linting with auto-fix
+pnpm format       # check code formatting with biome
+pnpm format:fix   # format code with biome
+pnpm check        # run both linting and formatting checks
+pnpm check:fix    # run both linting and formatting with auto-fix
+```
 
-    ```sh
-    yarn
-    ```
+## Project structure
 
-4. Start the development server
+```
+src/
+├── app/                # next.js app router
+│   ├── components/     # page-level components
+│   ├── layout.tsx      # root layout with metadata
+│   └── page.tsx        # main resume page
+├── components/         # shared components
+│   ├── icons/          # social icon components
+│   └── ui/             # shadcn/ui components
+├── data/               # resume data configuration
+│   └── resume-data.ts
+└── lib/                # utilities and types
+    ├── structured-data.ts
+    ├── types.ts
+    └── utils.ts
+```
 
-    ```sh
-    npm start
-    ```
+## Customization
 
-## 🚀 Building and Running for Production
+All resume content lives in a single file:
 
-1. Generate a full static production build
+```typescript
+// src/data/resume-data.ts
+export const RESUME_DATA = {
+  name: "Your Name",
+  initials: "YN",
+  location: "Your City, Country",
+  about: "Brief description",
+  summary: "Professional summary",
+  // ... more fields
+}
+```
 
-    ```sh
-    npm run build
-    ```
+Styling uses Tailwind CSS — customize colors in `tailwind.config.js` and global styles in `src/app/globals.css`.
 
-1. Preview the site as it will appear once deployed
+## Docker
 
-    ```sh
-    npm run serve
-    ```
+```bash
+docker compose build     # build the container
+docker compose up -d     # run the container
+docker compose down      # stop the container
+```
+
+## Acknowledgments
+
+Design inspired by [Bartosz Jarocki](https://github.com/BartoszJarocki/cv)'s [minimalist cv](https://github.com/BartoszJarocki/cv) template.
+
+## License
+
+This project is based on [minimalist cv](https://github.com/BartoszJarocki/cv), which is licensed under the [MIT License](LICENSE). Copyright (c) 2023 Bartosz Jarocki.
