@@ -6,6 +6,7 @@ import { XIcon } from "~/components/icons/x-icon";
 import { Button } from "~/components/ui/button";
 import { RESUME_DATA } from "~/data/resume-data";
 import type { IconType } from "~/lib/types";
+import { ToptalBadge } from "./toptal-badge";
 
 // Type-safe icon mapping
 const ICON_MAP: Record<
@@ -163,7 +164,7 @@ function PrintContact({ contact, personalWebsiteUrl }: PrintContactProps) {
  */
 export function Header() {
   return (
-    <header className="flex items-center justify-between">
+    <header className="flex flex-col gap-6 sm:flex-row sm:items-start sm:justify-between">
       <div className="flex-1 space-y-1.5">
         <h1 className="text-3xl font-bold tracking-tight" id="resume-name">
           {RESUME_DATA.name}
@@ -188,12 +189,17 @@ export function Header() {
         />
       </div>
 
-      <Avatar
-        className="size-28 ring-1 ring-muted"
-        src={RESUME_DATA.avatarUrl}
-        alt={`${RESUME_DATA.name}'s profile picture`}
-        fallback={RESUME_DATA.initials}
-      />
+      <div className="flex shrink-0 flex-row items-center gap-3 self-center sm:self-start">
+        <Avatar
+          className="size-28 ring-1 ring-muted"
+          src={RESUME_DATA.avatarUrl}
+          alt={`${RESUME_DATA.name}'s profile picture`}
+          fallback={RESUME_DATA.initials}
+        />
+        <div className="print:hidden">
+          <ToptalBadge variant="compact" />
+        </div>
+      </div>
     </header>
   );
 }
