@@ -39,6 +39,15 @@ export interface ResumeData {
     end: string | null;
     description: string;
     highlights?: readonly string[];
+    contractVia?: string;
+    contractViaLink?: string;
+    roles?: readonly {
+      title: string;
+      start: string;
+      end: string | null;
+      description: string;
+      highlights?: readonly string[];
+    }[];
   }>;
   skills: string[];
   projects: Array<{

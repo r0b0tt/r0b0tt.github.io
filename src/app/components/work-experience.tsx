@@ -1,6 +1,11 @@
 import { Badge } from "~/components/ui/badge";
 import { Card, CardContent, CardHeader } from "~/components/ui/card";
 import { Section } from "~/components/ui/section";
+import {
+  Timeline,
+  TimelineContent,
+  TimelineItem,
+} from "~/components/ui/timeline";
 import type { RESUME_DATA } from "~/data/resume-data";
 import { cn } from "~/lib/utils";
 
@@ -79,6 +84,53 @@ function CompanyLink({ company, link }: CompanyLinkProps) {
   );
 }
 
+interface WorkHighlightsProps {
+  highlights?: readonly string[];
+}
+
+function WorkHighlights({ highlights }: WorkHighlightsProps) {
+  if (!highlights || highlights.length === 0) return null;
+
+  return (
+    <ul className="list-inside list-disc">
+      {highlights.map((highlight) => (
+        <li key={highlight}>{highlight}</li>
+      ))}
+    </ul>
+  );
+}
+
+interface WorkRoleTimelineProps {
+  roles: NonNullable<WorkExperience["roles"]>;
+}
+
+function WorkRoleTimeline({ roles }: WorkRoleTimelineProps) {
+  return (
+    <Timeline className="mt-2 print:mt-1">
+      {roles.map((role, index) => (
+        <TimelineItem
+          key={`${role.title}-${role.start}`}
+          active={index === 0}
+          isLast={index === roles.length - 1}
+        >
+          <TimelineContent>
+            <div className="flex items-start justify-between gap-x-2">
+              <h4 className="font-mono text-sm font-semibold leading-none print:text-[12px]">
+                {role.title}
+              </h4>
+              <WorkPeriod start={role.start} end={role.end} />
+            </div>
+            <div className="mt-2 text-xs text-foreground/80 print:mt-1 print:text-[10px] text-pretty">
+              {role.description}
+              <WorkHighlights highlights={role.highlights} />
+            </div>
+          </TimelineContent>
+        </TimelineItem>
+      ))}
+    </Timeline>
+  );
+}
+
 interface WorkExperienceItemProps {
   work: WorkExperience;
 }
@@ -88,8 +140,19 @@ interface WorkExperienceItemProps {
  * Handles responsive layout for badges (mobile/desktop)
  */
 function WorkExperienceItem({ work }: WorkExperienceItemProps) {
-  const { company, link, badges, title, start, end, description, highlights } =
-    work;
+  const {
+    company,
+    link,
+    badges,
+    title,
+    start,
+    end,
+    description,
+    highlights,
+    contractVia,
+    contractViaLink,
+    roles,
+  } = work;
 
   return (
     <Card className="border-none py-1 print:py-0">
@@ -102,25 +165,45 @@ function WorkExperienceItem({ work }: WorkExperienceItemProps) {
               badges={badges}
             />
           </h3>
-          <WorkPeriod start={start} end={end} />
+          {(!roles || roles.length <= 1) && (
+            <WorkPeriod start={start} end={end} />
+          )}
         </div>
 
-        <h4 className="font-mono text-sm font-semibold leading-none print:text-[12px]">
-          {title}
-        </h4>
+        {contractVia && (
+          <p className="font-mono text-xs text-muted-foreground print:text-[10px]">
+            Contract via{" "}
+            {contractViaLink ? (
+              <a
+                className="hover:underline"
+                href={contractViaLink}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {contractVia}
+              </a>
+            ) : (
+              contractVia
+            )}
+          </p>
+        )}
+
+        {!roles && (
+          <h4 className="font-mono text-sm font-semibold leading-none print:text-[12px]">
+            {title}
+          </h4>
+        )}
       </CardHeader>
 
       <CardContent>
-        <div className="mt-2 text-xs text-foreground/80 print:mt-1 print:text-[10px] text-pretty">
-          {description}
-          {highlights && highlights.length > 0 && (
-            <ul className="list-inside list-disc">
-              {highlights.map((highlight) => (
-                <li key={highlight}>{highlight}</li>
-              ))}
-            </ul>
-          )}
-        </div>
+        {roles ? (
+          <WorkRoleTimeline roles={roles} />
+        ) : (
+          <div className="mt-2 text-xs text-foreground/80 print:mt-1 print:text-[10px] text-pretty">
+            {description}
+            <WorkHighlights highlights={highlights} />
+          </div>
+        )}
         <div className="mt-2">
           <BadgeList
             className="-mx-2 flex-wrap gap-1 sm:hidden"
@@ -152,7 +235,7 @@ export function WorkExperience({ work }: WorkExperienceProps) {
         aria-labelledby="work-experience"
       >
         {work.map((item) => (
-          <article key={`${item.company}-${item.start}`}>
+          <article key={item.company}>
             <WorkExperienceItem work={item} />
           </article>
         ))}
