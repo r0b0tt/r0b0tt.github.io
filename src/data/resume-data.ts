@@ -5,15 +5,16 @@ export const RESUME_DATA: ResumeData = {
   initials: "AM",
   location: "Nairobi, Kenya",
   locationLink: "https://www.google.com/maps/place/Nairobi,+Kenya",
-  about: "Software engineer building scalable digital products",
+  about:
+    "Engineering products people rely on - from fintech platforms to global e-commerce",
   summary:
-    "Software engineer based in Nairobi, Kenya. I design and build scalable web and mobile applications with a focus on user experience, cloud infrastructure, and DevOps. I incorporate AI-assisted development into my workflow to ship reliable, high-quality software efficiently.",
+    "I work on digital products across fintech, mobile, and enterprise, from the user experience to the infrastructure that keeps them dependable in production. Architecture, cloud infrastructure and consistent delivery are what I focus on most. I use AI-assisted tools when they genuinely help, not as a substitute for good engineering.",
   avatarUrl:
     "https://assets.toptal.io/images?url=https%3A%2F%2Fbs-uploads.toptal.io%2Fblackfish-uploads%2Ftalent%2F992337%2Fpicture%2Foptimized%2Fhuge_ed0fcf7de3882206b9a0c20301a34b6b-1b1d363b6c829b825c9fb2bdb9ddd5ff.jpg&width=480&quality=75",
   personalWebsiteUrl: "https://antoniomaina.com",
   contact: {
     email: "antoniomainakn@gmail.com",
-    tel: "",
+    tel: "+254708342042",
     social: [
       { name: "GitHub", url: "https://github.com/r0b0tt", icon: "github" },
       {
@@ -22,12 +23,6 @@ export const RESUME_DATA: ResumeData = {
         icon: "linkedin",
       },
       { name: "X", url: "https://twitter.com/__r0b0t__", icon: "x" },
-      { name: "Blog", url: "https://antonio.hashnode.dev", icon: "globe" },
-      {
-        name: "Instagram",
-        url: "https://www.instagram.com/__r0b0t__",
-        icon: "globe",
-      },
     ],
   },
   education: [
@@ -53,11 +48,19 @@ export const RESUME_DATA: ResumeData = {
           start: "2025",
           end: null,
           description:
-            "Leading engineering on the Chumz savings platform and internal tooling.",
+            "Leading engineering on the Moneto Venture's savings platforms and internal tooling.",
           highlights: [
-            "Leading development of core platform features and internal tools",
-            "Architecting the Chumz Leaderboard and related gamification systems",
-            "Assisting in architectural design of the Chumz core system",
+            {
+              text: "Introduced monorepo architecture for the mobile applications and marketing websites to be able to support various markets, namely Chumz(Kenya) and Tunzi(Rwanda)",
+              links: [
+                { label: "Chumz(Kenya)", href: "https://chumz.io" },
+                { label: "Tunzi(Rwanda)", href: "https://tunzi.money" },
+              ],
+            },
+            "Owned the development and maintenance of major features in the mobile applications, such as Groups",
+            "Owned the development and maintenance of major features in the marketing websites, such as the landing page and the about page",
+            "Leading frontend development for internal tools, such as Customer Experience dashboard",
+            "Assisting in architectural design of various microservices",
             "Mentoring engineers and driving technical standards across the team",
           ],
         },
@@ -68,27 +71,12 @@ export const RESUME_DATA: ResumeData = {
           description:
             "Building and maintaining the Chumz savings platform and supporting internal tools.",
           highlights: [
-            "Customer research and setting up analytics for various products",
-            "Building internal tools such as the Fund Administration System and CRM",
-            "Developing features for the core chumz.io platform",
-            "Collaborating on product and infrastructure improvements",
+            "Contributed to all development steps, including customer research, design sprints, and designing the core platform infrastructure.",
+            "Built a fund administration system that daily calculated the amount of money invested by customers in either money market funds or fixed-income funds and sent a daily email report to the stakeholders.",
+            "Collaborated with the marketing and product teams to come up with various automations in the ecosystem, such as integrations with Customer.io and sending customer statements.",
+            "Led the development and maintenance of internal tools such as the fund administration system and reporting service.",
           ],
         },
-      ],
-    },
-    {
-      company: "Weza Ventures",
-      link: "https://www.weza.io/",
-      badges: ["Nairobi, Kenya"],
-      title: "Software Engineer",
-      start: "2020",
-      end: null,
-      description:
-        "Leading development of Weza Ventures front-end applications and UI implementation.",
-      highlights: [
-        "Leading development and maintenance of weza.io front-end applications including the web dashboard and other internal dashboards",
-        "Working with the design lead in creating and implementing user interface designs for all internal and external company projects",
-        "Assist in implementing user interface designs on front-end applications for Weza's consultancy projects",
       ],
     },
     {
@@ -126,6 +114,25 @@ export const RESUME_DATA: ResumeData = {
         "Wrote unit tests using Jest and Testing Library and end-to-end tests using Cypress",
         "Assisted in migrating the UI from Bootstrap to a component-driven approach using Tailwind CSS",
         "Oversaw setting up identity and access management in the front end using Keycloak",
+      ],
+    },
+    {
+      company: "Weza Ventures",
+      link: "https://www.weza.io/",
+      badges: ["Nairobi, Kenya"],
+      title: "Software Engineer",
+      start: "2020",
+      end: "2021",
+      description:
+        "Leading development of Weza Ventures front-end applications",
+      highlights: [
+        "Leading development and maintenance of weza.io front-end applications including the web dashboard and other internal dashboards",
+        "Working with the design lead in creating and implementing user interface designs for all internal and external company projects",
+        "Assist in implementing user interface designs on front-end applications for Weza's consultancy projects",
+        {
+          text: "End to end implementation of WezaGo, a BNPL product for Weza Ventures",
+          links: [{ label: "WezaGo", href: "https://wezago.com" }],
+        },
       ],
     },
     {

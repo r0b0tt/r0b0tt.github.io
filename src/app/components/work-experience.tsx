@@ -7,6 +7,7 @@ import {
   TimelineItem,
 } from "~/components/ui/timeline";
 import type { RESUME_DATA } from "~/data/resume-data";
+import type { Highlight } from "~/lib/types";
 import { cn } from "~/lib/utils";
 
 type WorkExperience = (typeof RESUME_DATA)["work"][number];
@@ -85,7 +86,53 @@ function CompanyLink({ company, link }: CompanyLinkProps) {
 }
 
 interface WorkHighlightsProps {
-  highlights?: readonly string[];
+  highlights?: readonly Highlight[];
+}
+
+function renderHighlightContent(highlight: Highlight) {
+  if (typeof highlight === "string") return highlight;
+
+  const { text, links = [] } = highlight;
+  if (links.length === 0) return text;
+
+  let parts: React.ReactNode[] = [text];
+
+  for (const { label, href } of links) {
+    const nextParts: React.ReactNode[] = [];
+
+    for (const part of parts) {
+      if (typeof part !== "string") {
+        nextParts.push(part);
+        continue;
+      }
+
+      const index = part.indexOf(label);
+      if (index === -1) {
+        nextParts.push(part);
+        continue;
+      }
+
+      if (index > 0) nextParts.push(part.slice(0, index));
+      nextParts.push(
+        <a
+          key={`${href}-${index}`}
+          className="underline"
+          href={href}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          {label}
+        </a>,
+      );
+      if (index + label.length < part.length) {
+        nextParts.push(part.slice(index + label.length));
+      }
+    }
+
+    parts = nextParts;
+  }
+
+  return parts;
 }
 
 function WorkHighlights({ highlights }: WorkHighlightsProps) {
@@ -93,8 +140,14 @@ function WorkHighlights({ highlights }: WorkHighlightsProps) {
 
   return (
     <ul className="list-inside list-disc">
-      {highlights.map((highlight) => (
-        <li key={highlight}>{highlight}</li>
+      {highlights.map((highlight, index) => (
+        <li
+          key={
+            typeof highlight === "string" ? highlight : `${highlight.text}-${index}`
+          }
+        >
+          {renderHighlightContent(highlight)}
+        </li>
       ))}
     </ul>
   );

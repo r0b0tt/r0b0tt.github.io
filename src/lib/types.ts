@@ -6,6 +6,13 @@ export type ResumeIcon =
 
 export type IconType = "github" | "linkedin" | "x" | "globe" | "mail" | "phone";
 
+export type Highlight =
+  | string
+  | {
+      text: string;
+      links?: readonly { label: string; href: string }[];
+    };
+
 export interface ResumeData {
   name: string;
   initials: string;
@@ -38,7 +45,7 @@ export interface ResumeData {
     start: string;
     end: string | null;
     description: string;
-    highlights?: readonly string[];
+    highlights?: readonly Highlight[];
     contractVia?: string;
     contractViaLink?: string;
     roles?: readonly {
@@ -46,7 +53,7 @@ export interface ResumeData {
       start: string;
       end: string | null;
       description: string;
-      highlights?: readonly string[];
+      highlights?: readonly Highlight[];
     }[];
   }>;
   skills: string[];
