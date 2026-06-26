@@ -1,8 +1,6 @@
 import { ImageResponse } from "next/og";
 import { RESUME_DATA } from "../data/resume-data";
 
-export const runtime = "edge";
-
 export const alt = "Minimalist Resume";
 export const size = {
   width: 1200,

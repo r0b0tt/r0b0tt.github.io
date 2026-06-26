@@ -2,7 +2,6 @@ import { GlobeIcon, MailIcon, PhoneIcon } from "lucide-react";
 import type React from "react";
 import { Avatar } from "~/components/avatar";
 import { GitHubIcon, LinkedInIcon } from "~/components/icons";
-import { XIcon } from "~/components/icons/x-icon";
 import { Button } from "~/components/ui/button";
 import { RESUME_DATA } from "~/data/resume-data";
 import type { IconType } from "~/lib/types";
@@ -15,7 +14,6 @@ const ICON_MAP: Record<
 > = {
   github: GitHubIcon,
   linkedin: LinkedInIcon,
-  x: XIcon,
   globe: GlobeIcon,
   mail: MailIcon,
   phone: PhoneIcon,

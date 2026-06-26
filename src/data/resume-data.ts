@@ -22,7 +22,6 @@ export const RESUME_DATA: ResumeData = {
         url: "https://www.linkedin.com/in/antoniomaina",
         icon: "linkedin",
       },
-      { name: "X", url: "https://twitter.com/__r0b0t__", icon: "x" },
     ],
   },
   education: [
@@ -173,13 +172,20 @@ export const RESUME_DATA: ResumeData = {
   ],
   projects: [
     {
-      title: "Chuckies",
-      techStack: ["React.js", "Redux", "Chuck Norris API"],
+      title: "toolbox",
+      techStack: [
+        "React",
+        "TypeScript",
+        "Vite",
+        "TanStack Router",
+        "Tailwind CSS",
+        "Cloudflare",
+      ],
       description:
-        "A simple website that generates quotes from the Chuck Norris API, which you can filter by category and share on Twitter.",
+        "A keyboard-first collection of 14 developer utilities — Base64, JWT decode/verify, JSON/YAML/CSV conversion, UUID generation, hashing, and more. Everything runs client-side in the browser.",
       link: {
-        label: "chuckies.netlify.app",
-        href: "https://chuckies.netlify.app/",
+        label: "tools.antoniomaina.com",
+        href: "https://tools.antoniomaina.com",
       },
     },
     {

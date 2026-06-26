@@ -27,12 +27,6 @@ export const metadata: Metadata = {
       },
     ],
   },
-  twitter: {
-    card: "summary_large_image",
-    title: `${RESUME_DATA.name} - Resume`,
-    description: RESUME_DATA.about,
-    images: [`${RESUME_DATA.personalWebsiteUrl}/opengraph-image`],
-  },
 };
 
 /**
